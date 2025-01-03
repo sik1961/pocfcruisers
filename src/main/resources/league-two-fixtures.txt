@@ -1,5 +1,17 @@
-Bromley
-Bromley
+Saturday 4th January
+Cheltenham Town
+Cheltenham Town
+
+P
+P
+
+Walsall
+Walsall
+Match Postponed
+Match Postponed
+Notts County versus Swindon Town kick off 12:30
+Notts County
+Notts County
 
 12:30
 12:30
@@ -7,49 +19,19 @@ plays
 
 Swindon Town
 Swindon Town
-Carlisle United versus Accrington Stanley kick off 12:30
-Carlisle United
-Carlisle United
-
-12:30
-12:30
-plays
-
-Accrington Stanley
-Accrington Stanley
-Bradford City versus Chesterfield kick off 15:00
+Bradford City versus Grimsby Town kick off 13:00
 Bradford City
 Bradford City
 
-15:00
-15:00
+13:00
+13:00
 plays
 
-Chesterfield
-Chesterfield
-Cheltenham Town versus Notts County kick off 15:00
-Cheltenham Town
-Cheltenham Town
-
-15:00
-15:00
-plays
-
-Notts County
-Notts County
-Colchester United versus Doncaster Rovers kick off 15:00
-Colchester United
-Colchester United
-
-15:00
-15:00
-plays
-
-Doncaster Rovers
-Doncaster Rovers
-Fleetwood Town versus Harrogate Town kick off 15:00
-Fleetwood Town
-Fleetwood Town
+Grimsby Town
+Grimsby Town
+Barrow versus Harrogate Town kick off 15:00
+Barrow
+Barrow
 
 15:00
 15:00
@@ -57,9 +39,19 @@ plays
 
 Harrogate Town
 Harrogate Town
-Grimsby Town versus Port Vale kick off 15:00
-Grimsby Town
-Grimsby Town
+Colchester United versus Accrington Stanley kick off 15:00
+Colchester United
+Colchester United
+
+15:00
+15:00
+plays
+
+Accrington Stanley
+Accrington Stanley
+Doncaster Rovers versus Port Vale kick off 15:00
+Doncaster Rovers
+Doncaster Rovers
 
 15:00
 15:00
@@ -67,7 +59,7 @@ plays
 
 Port Vale
 Port Vale
-Milton Keynes Dons versus Crewe Alexandra kick off 15:00
+Milton Keynes Dons versus Salford City kick off 15:00
 Milton Keynes Dons
 Milton Keynes Dons
 
@@ -75,19 +67,9 @@ Milton Keynes Dons
 15:00
 plays
 
-Crewe Alexandra
-Crewe Alexandra
-Salford City versus Morecambe kick off 15:00
 Salford City
 Salford City
-
-15:00
-15:00
-plays
-
-Morecambe
-Morecambe
-Tranmere Rovers versus Barrow kick off 15:00
+Tranmere Rovers versus Carlisle United kick off 15:00
 Tranmere Rovers
 Tranmere Rovers
 
@@ -95,14 +77,4 @@ Tranmere Rovers
 15:00
 plays
 
-Barrow
-Barrow
-Walsall versus Newport County kick off 15:00
-Walsall
-Walsall
-
-15:00
-15:00
-plays
-
-Newport County
+Carlisle United

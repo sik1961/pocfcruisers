@@ -6,19 +6,21 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import static java.lang.String.format;
 
-public class TableManager {
+public class FixtureManager {
 
     public Last6Helper last6Helper = new Last6Helper();
 
     private static final String FORM_FORMAT = "%2d %30s %2d %2d %2d %2d %2d %2d %3d %3d %6s %5.2f %5.2f %5.2f %5.2f";
     private static final String HEAD_FORMAT = "%2s %30s %2s %2s %2s %2s %2s %2s %3s %3s %6s %5s %5s %5s %5s";
 
-    public LeagueTable build(String leagueName, String tableUrl) {
+    public List<Match> build(String leagueName, String tableUrl) {
         Document doc = null;
         Double maxGoalsFor = 0.0D;
         Double maxGoalDiff = 0.0D;
@@ -29,53 +31,44 @@ public class TableManager {
             throw new RuntimeException(e);
         }
 
-        Element table = doc.select("table").get(0); //select the first table.
-        Elements rows = table.select("tr");
+        //doc.children().forEach(System.out::println);
+        Element main = doc.getElementById("main-data");
+        //main.forEachNode();
 
-        Map<Integer, TeamForm> teamFormMap = new HashMap<>();
+        String date = null;
+        String h2;
+        Elements versus;
+        for (Element e:main.getAllElements()) {
+            System.out.println(">" + e.className());
+            h2 = Jsoup.parse(e.html()).select("div:is(h2)").toString();
+            if (h2 != null) {
+                date = h2;
+                System.out.println("Date: " + date);
+            }
+            versus = Jsoup.parse(e.html()).select("span:matchesOwn(versus)");
+            //versus.forEach(Element::text);
 
-        for (int i = 1; i < rows.size(); i++) { //first row is the col names so skip it.
-            Element row = rows.get(i);
-            Elements cols = row.select("td");
-
-            if (cols.size() == 11) {
-
-                TeamForm teamForm = new TeamForm.TeamFormBuilder()
-                        .position(Integer.parseInt(cols.get(0).text()))
-                        .teamName(cols.get(1).text())
-                        .gamesPlayed(Integer.parseInt(cols.get(2).text()))
-                        .gamesWon(Integer.parseInt(cols.get(3).text()))
-                        .gamesDrawn(Integer.parseInt(cols.get(4).text()))
-                        .gamesLost(Integer.parseInt(cols.get(5).text()))
-                        .goalsFor(Integer.parseInt(cols.get(6).text()))
-                        .goalsAgainst(Integer.parseInt(cols.get(7).text()))
-                        .goalDifference(Integer.parseInt(cols.get(8).text()))
-                        .points(Integer.parseInt(cols.get(9).text()))
-                        .lastSixForm(last6Helper.squash(cols.get(10).text()))
-                        .enhancedStats(last6Helper.getEnhancedStats(cols))
-                        .build();
-
-                teamFormMap.put(Integer.parseInt(cols.get(0).text()), teamForm);
-                if (Integer.parseInt(cols.get(6).text())>maxGoalsFor) {
-                    maxGoalsFor = Double.parseDouble(cols.get(6).text());
-                }
-                if (Integer.parseInt(cols.get(8).text())>maxGoalDiff) {
-                    maxGoalDiff = Double.parseDouble(cols.get(8).text());
-                }
-            } else {
-                throw new IllegalStateException("Column count <> 11");
+            if (versus != null) {
+                System.out.println("Match: " + date + " " + versus);
             }
 
+
         }
+
+
+        //System.out.println(main.html());
+        //main.forEachNode( node -> {} );
+        String x =  Jsoup.parse(main.html()).select("span:matchesOwn(versus)").toString();
+        System.out.println(x);
+
+//        Element table = doc.select("table").get(0); //select the first table.
+//        Elements rows = table.select("tr");
+
+
 //        for(Integer k:teamFormMap.keySet()) {
 //            System.out.println(teamFormMap.get(k));
 //        }
-    return new LeagueTable.LeagueTableBuilder()
-            .leagueName(leagueName)
-            .table(teamFormMap)
-            .maxGoalsFor(maxGoalsFor)
-            .maxGoalDiff(maxGoalDiff)
-            .build();
+    return null;
     }
 
     public TeamForm getTeamFormByName(LeagueTable leagueTable, String teamName) {

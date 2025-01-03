@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import static com.sik.footy.Constants.GOALS_FOR_DELTA_DRAW_MAX;
 
 public class FootyPredictor {
 
@@ -15,8 +16,9 @@ public class FootyPredictor {
     private static final String V = ":";
     private static final String HW = "HW";
     private static final String AW = "AW";
-    private static final String RESULT_FORMAT = "%30s %3s %30s %6s %1.2f %6s %1.2f %6s %1.2f %6s %1.2f";
-    private static final String HEADER_FORMAT = "%30s %3s %30s %11s %11s %11s %11s";
+    private static final String DR = "DR";
+    private static final String RESULT_FORMAT = "%31s %3s %31s %5s %1.2f %5s %1.2f %5s %1.2f %5s %1.2f";
+    private static final String HEADER_FORMAT = "%31s %3s %31s %11s %11s %11s %11s";
 
     TableManager tableManager = new TableManager();
 
@@ -34,21 +36,38 @@ public class FootyPredictor {
         System.out.println();
         List<Match> matches = this.buildMatches(league, matchList);
         for (Match m:matches) {
-            System.out.printf((RESULT_FORMAT) ,
-                    m.getHomeTeam().getTeamName(),
+            double positionDelta = (double) (m.getHomeTeam().getPosition()
+                    -m.getAwayTeam().getPosition()) /league.getTable().size();
+            double last6Delta = (double) m.getHomeTeam().getEnhancedStats().getLastSixFormFactor()
+                    -m.getAwayTeam().getEnhancedStats().getLastSixFormFactor();
+            double goalsForDelta = (double) m.getHomeTeam().getEnhancedStats().getAverageGoalsFor()
+                    -m.getAwayTeam().getEnhancedStats().getAverageGoalsFor()/league.getMaxGoalsFor();
+            double goalDiffDelta = (double) m.getHomeTeam().getEnhancedStats().getAverageGoalDifference()
+                    -m.getAwayTeam().getEnhancedStats().getAverageGoalDifference()/league.getMaxGoalDiff();
+            System.out.printf((RESULT_FORMAT) , m.getHomeTeam().getTeamName() + " (" + m.getHomeTeam().getLastSixForm() + ")",
                     " v ",
-                    m.getAwayTeam().getTeamName(),
-                    m.getHomeTeam().getPosition() < m.getAwayTeam().getPosition()?HW:AW,
-                    Math.abs((double) (m.getHomeTeam().getPosition() - m.getAwayTeam().getPosition()) /league.getTable().size()),
-                    m.getHomeTeam().getEnhancedStats().getLastSixFormFactor() > m.getAwayTeam().getEnhancedStats().getLastSixFormFactor()?HW:AW,
-                    Math.abs((double) m.getHomeTeam().getEnhancedStats().getLastSixFormFactor()-m.getAwayTeam().getEnhancedStats().getLastSixFormFactor()),
-                    m.getHomeTeam().getEnhancedStats().getAverageGoalDifference() > m.getAwayTeam().getEnhancedStats().getAverageGoalDifference()?HW:AW,
-                    Math.abs((double) m.getHomeTeam().getEnhancedStats().getAverageGoalDifference()-m.getAwayTeam().getEnhancedStats().getAverageGoalDifference())/league.getMaxGoalDiff(),
-                    m.getHomeTeam().getEnhancedStats().getAverageGoalsFor() > m.getAwayTeam().getEnhancedStats().getAverageGoalsFor()?HW:AW,
-                    Math.abs((double) m.getHomeTeam().getEnhancedStats().getAverageGoalsFor()-m.getAwayTeam().getEnhancedStats().getAverageGoalsFor())/league.getMaxGoalsFor());
+                    m.getAwayTeam().getTeamName() + " (" + m.getAwayTeam().getLastSixForm() + ")",
+                    positionDelta<0?HW:AW,
+                    positionDelta,
+                    last6Delta>0?HW:AW,
+                    last6Delta,
+                    goalDiffDelta>0?HW:AW,
+                    goalDiffDelta,
+                    this.resultFromGoalsForDelta(goalsForDelta),
+                    goalsForDelta);
             System.out.println();
         }
 
+    }
+
+    private String resultFromGoalsForDelta(double goalsForDelta) {
+        if (goalsForDelta >= GOALS_FOR_DELTA_DRAW_MAX) {
+            return HW;
+        } else if (goalsForDelta <= -GOALS_FOR_DELTA_DRAW_MAX) {
+            return AW;
+        } else {
+            return DR;
+        }
     }
 
     private List<Match> buildMatches(LeagueTable leagueTable, List<String> matchList) {

@@ -1,13 +1,35 @@
-Leicester City
-Leicester City
+Saturday 4th January
+Tottenham Hotspur versus Newcastle United kick off 12:30
+Tottenham Hotspur
+Tottenham Hotspur
 
-14:30
-14:30
+12:30
+12:30
 plays
 
-Manchester City
-Manchester City
-Crystal Palace versus Southampton kick off 15:00
+Newcastle United
+Newcastle United
+AFC Bournemouth versus Everton kick off 15:00
+AFC Bournemouth
+AFC Bournemouth
+
+15:00
+15:00
+plays
+
+Everton
+Everton
+Aston Villa versus Leicester City kick off 15:00
+Aston Villa
+Aston Villa
+
+15:00
+15:00
+plays
+
+Leicester City
+Leicester City
+Crystal Palace versus Chelsea kick off 15:00
 Crystal Palace
 Crystal Palace
 
@@ -15,44 +37,34 @@ Crystal Palace
 15:00
 plays
 
-Southampton
-Southampton
-Everton versus Nottingham Forest kick off 15:00
-Everton
-Everton
+Chelsea
+Chelsea
+Manchester City versus West Ham United kick off 15:00
+Manchester City
+Manchester City
 
 15:00
 15:00
 plays
 
-Nottingham Forest
-Nottingham Forest
-Fulham versus AFC Bournemouth kick off 15:00
-Fulham
-Fulham
-
-15:00
-15:00
-plays
-
-AFC Bournemouth
-AFC Bournemouth
-Tottenham Hotspur versus Wolverhampton Wanderers kick off 15:00
-Tottenham Hotspur
-Tottenham Hotspur
-
-15:00
-15:00
-plays
-
-Wolverhampton Wanderers
-Wolverhampton Wanderers
-West Ham United versus Liverpool kick off 17:15
 West Ham United
 West Ham United
+Southampton versus Brentford kick off 15:00
+Southampton
+Southampton
 
-17:15
-17:15
+15:00
+15:00
 plays
 
-Liverpool
+Brentford
+Brentford
+Brighton & Hove Albion versus Arsenal kick off 17:30
+Brighton & Hove Albion
+Brighton & Hove Albion
+
+17:30
+17:30
+plays
+
+Arsenal

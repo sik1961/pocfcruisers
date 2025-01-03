@@ -1,45 +1,27 @@
-Charlton Athletic
-Charlton Athletic
+Saturday 4th January
+Burton Albion versus Northampton Town kick off 12:30
+Burton Albion
+Burton Albion
 
 12:30
 12:30
 plays
 
-Wycombe Wanderers
-Wycombe Wanderers
-Rotherham United versus Stockport County kick off 12:30
-Rotherham United
-Rotherham United
+Northampton Town
+Northampton Town
+Cambridge United versus Bristol Rovers kick off 12:30
+Cambridge United
+Cambridge United
 
 12:30
 12:30
 plays
 
-Stockport County
-Stockport County
-Birmingham City versus Blackpool kick off 15:00
-Birmingham City
-Birmingham City
-
-15:00
-15:00
-plays
-
-Blackpool
-Blackpool
-Bolton Wanderers versus Lincoln City kick off 15:00
-Bolton Wanderers
-Bolton Wanderers
-
-15:00
-15:00
-plays
-
-Lincoln City
-Lincoln City
-Exeter City versus Crawley Town kick off 15:00
-Exeter City
-Exeter City
+Bristol Rovers
+Bristol Rovers
+Barnsley versus Crawley Town kick off 15:00
+Barnsley
+Barnsley
 
 15:00
 15:00
@@ -47,7 +29,27 @@ plays
 
 Crawley Town
 Crawley Town
-Huddersfield Town versus Burton Albion kick off 15:00
+Charlton Athletic versus Reading kick off 15:00
+Charlton Athletic
+Charlton Athletic
+
+15:00
+15:00
+plays
+
+Reading
+Reading
+Exeter City versus Bolton Wanderers kick off 15:00
+Exeter City
+Exeter City
+
+15:00
+15:00
+plays
+
+Bolton Wanderers
+Bolton Wanderers
+Huddersfield Town versus Rotherham United kick off 15:00
 Huddersfield Town
 Huddersfield Town
 
@@ -55,9 +57,9 @@ Huddersfield Town
 15:00
 plays
 
-Burton Albion
-Burton Albion
-Leyton Orient versus Cambridge United kick off 15:00
+Rotherham United
+Rotherham United
+Leyton Orient versus Shrewsbury Town kick off 15:00
 Leyton Orient
 Leyton Orient
 
@@ -65,21 +67,21 @@ Leyton Orient
 15:00
 plays
 
-Cambridge United
-Cambridge United
-Peterborough United versus Barnsley kick off 15:00
-Peterborough United
-Peterborough United
+Shrewsbury Town
+Shrewsbury Town
+Lincoln City versus Stevenage kick off 15:00
+Lincoln City
+Lincoln City
 
 15:00
 15:00
 plays
 
-Barnsley
-Barnsley
-Reading versus Mansfield Town kick off 15:00
-Reading
-Reading
+Stevenage
+Stevenage
+Stockport County versus Mansfield Town kick off 15:00
+Stockport County
+Stockport County
 
 15:00
 15:00
@@ -87,32 +89,32 @@ plays
 
 Mansfield Town
 Mansfield Town
-Shrewsbury Town versus Northampton Town kick off 15:00
-Shrewsbury Town
-Shrewsbury Town
-
-15:00
-15:00
-plays
-
-Northampton Town
-Northampton Town
-Stevenage versus Bristol Rovers kick off 15:00
-Stevenage
-Stevenage
-
-15:00
-15:00
-plays
-
-Bristol Rovers
-Bristol Rovers
-Wrexham versus Wigan Athletic kick off 15:00
-Wrexham
-Wrexham
-
-15:00
-15:00
-plays
-
+Wigan Athletic versus Birmingham City kick off 15:00
 Wigan Athletic
+Wigan Athletic
+
+15:00
+15:00
+plays
+
+Birmingham City
+Birmingham City
+Wrexham versus Peterborough United kick off 15:00
+Wrexham
+Wrexham
+
+15:00
+15:00
+plays
+
+Peterborough United
+Peterborough United
+Wycombe Wanderers versus Blackpool kick off 15:00
+Wycombe Wanderers
+Wycombe Wanderers
+
+15:00
+15:00
+plays
+
+Blackpool
