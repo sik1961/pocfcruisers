@@ -25,7 +25,7 @@ public class FootyPredictor {
     public void predict(LeagueTable league) {
 
         TableManager tableManager = new TableManager();
-        List<String> matchList = this.getMatchesFromFile(league.getLeagueName() + "-fixtures.txt");
+        List<String> matchList = this.getMatchesFromFile("data/" + league.getLeagueName() + "-fixtures.txt");
 
 
 //        for(Match m:matchList) {
