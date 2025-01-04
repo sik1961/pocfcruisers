@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import static com.sik.footy.Constants.GOALS_FOR_DELTA_DRAW_MAX;
 
@@ -17,8 +19,9 @@ public class FootyPredictor {
     private static final String HW = "HW";
     private static final String AW = "AW";
     private static final String DR = "DR";
-    private static final String RESULT_FORMAT = "%31s %3s %31s %5s %1.2f %5s %1.2f %5s %1.2f %5s %1.2f";
-    private static final String HEADER_FORMAT = "%31s %3s %31s %11s %11s %11s %11s";
+    private static final String RESULT_FORMAT = "%31s %3s %31s %11s %11s %11s %11s %11s";
+    //private static final String HEADER_FORMAT = "%31s %3s %31s %11s %11s %11s %11s";
+    private static final String DBLF = " %.2f";
 
     TableManager tableManager = new TableManager();
 
@@ -32,29 +35,27 @@ public class FootyPredictor {
 //            System.out.println(m);
 //        }
         System.out.println("Matches: " + league.getLeagueName());
-        System.out.printf((HEADER_FORMAT) ,"Home Team", "", "Away Team", "Lg-PosΔ", "L6FormΔ", "GlDiffΔ", "GlsForΔ");
+        System.out.printf((RESULT_FORMAT) ,"Home Team", "", "Away Team", "Lg-PosΔ", "L6FormΔ", "GlDiffΔ", "GlsForΔ", "AverageΔ");
         System.out.println();
         List<Match> matches = this.buildMatches(league, matchList);
         for (Match m:matches) {
-            double positionDelta = (double) (m.getHomeTeam().getPosition()
-                    -m.getAwayTeam().getPosition()) /league.getTable().size();
+            double positionDelta = (double) (m.getAwayTeam().getPosition()
+                    -m.getHomeTeam().getPosition()) /league.getTable().size();
             double last6Delta = (double) m.getHomeTeam().getEnhancedStats().getLastSixFormFactor()
                     -m.getAwayTeam().getEnhancedStats().getLastSixFormFactor();
-            double goalsForDelta = (double) m.getHomeTeam().getEnhancedStats().getAverageGoalsFor()
-                    -m.getAwayTeam().getEnhancedStats().getAverageGoalsFor()/league.getMaxGoalsFor();
-            double goalDiffDelta = (double) m.getHomeTeam().getEnhancedStats().getAverageGoalDifference()
-                    -m.getAwayTeam().getEnhancedStats().getAverageGoalDifference()/league.getMaxGoalDiff();
+            double goalsForDelta = (double) (m.getHomeTeam().getEnhancedStats().getAverageGoalsFor()
+                    -m.getAwayTeam().getEnhancedStats().getAverageGoalsFor())/league.getMaxGoalsFor();
+            double goalDiffDelta = (double) (m.getHomeTeam().getEnhancedStats().getAverageGoalDifference()
+                    -m.getAwayTeam().getEnhancedStats().getAverageGoalDifference())/league.getMaxGoalDiff();
+            double overall = Arrays.stream(new double[]{positionDelta,last6Delta,goalsForDelta,goalDiffDelta}).average().getAsDouble();
             System.out.printf((RESULT_FORMAT) , m.getHomeTeam().getTeamName() + " (" + m.getHomeTeam().getLastSixForm() + ")",
                     " v ",
                     m.getAwayTeam().getTeamName() + " (" + m.getAwayTeam().getLastSixForm() + ")",
-                    positionDelta<0?HW:AW,
-                    positionDelta,
-                    last6Delta>0?HW:AW,
-                    last6Delta,
-                    goalDiffDelta>0?HW:AW,
-                    goalDiffDelta,
-                    this.resultFromGoalsForDelta(goalsForDelta),
-                    goalsForDelta);
+                    (positionDelta>0?HW:AW) + String.format(DBLF,positionDelta),
+                    (last6Delta>0?HW:AW) + String.format(DBLF,last6Delta),
+                    (goalDiffDelta>0?HW:AW) + String.format(DBLF,goalDiffDelta),
+                    (goalsForDelta>0?HW:AW) + String.format(DBLF,goalsForDelta),
+                    (overall>0?HW:AW) + String.format(DBLF,overall));
             System.out.println();
         }
 

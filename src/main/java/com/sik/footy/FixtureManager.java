@@ -3,13 +3,12 @@ package com.sik.footy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.TextNode;
+import org.jsoup.safety.Safelist;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.List;
+import java.util.*;
 
 import static java.lang.String.format;
 
@@ -31,25 +30,30 @@ public class FixtureManager {
             throw new RuntimeException(e);
         }
 
-        //doc.children().forEach(System.out::println);
+        //doc.stream().distinct().forEach(System.out::println);
         Element main = doc.getElementById("main-data");
-        //main.forEachNode();
+        System.out.println(">>>>>>>>" + doc.html() + "<<<<<<<<<");
+        Elements elements = doc.select("b");
+        for (Element element : elements) {
+            element.replaceWith(new TextNode(element.toString()));
+        }
+
 
         String date = null;
         String h2;
         Elements versus;
         for (Element e:main.getAllElements()) {
-            System.out.println(">" + e.className());
-            h2 = Jsoup.parse(e.html()).select("div:is(h2)").toString();
-            if (h2 != null) {
-                date = h2;
-                System.out.println("Date: " + date);
-            }
+            System.out.println("****" + e.className() + "=" + e.getElementsMatchingOwnText("Saturday"));
+//            h2 = Jsoup.parse(e.html()).select("div:is(h2)").toString();
+//            if (h2 != null) {
+//                date = h2;
+//                System.out.println("Date: " + date);
+//            }
             versus = Jsoup.parse(e.html()).select("span:matchesOwn(versus)");
             //versus.forEach(Element::text);
 
             if (versus != null) {
-                System.out.println("Match: " + date + " " + versus);
+                //System.out.println("Match: " + date + " " + versus);
             }
 
 
