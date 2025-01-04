@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalDouble;
+import java.util.*;
 import java.util.stream.Collectors;
 import static com.sik.footy.Constants.GOALS_FOR_DELTA_DRAW_MAX;
 
@@ -25,11 +22,11 @@ public class FootyPredictor {
 
     TableManager tableManager = new TableManager();
 
-    public void predict(LeagueTable league) {
+    public Collection<PredictedResult> predict(LeagueTable league) {
 
         TableManager tableManager = new TableManager();
         List<String> matchList = this.getMatchesFromFile("data/" + league.getLeagueName() + "-fixtures.txt");
-
+        List<PredictedResult> results = new ArrayList<>();
 
 //        for(Match m:matchList) {
 //            System.out.println(m);
@@ -57,8 +54,18 @@ public class FootyPredictor {
                     (goalsForDelta>0?HW:AW) + String.format(DBLF,goalsForDelta),
                     (overall>0?HW:AW) + String.format(DBLF,overall));
             System.out.println();
+            results.add(PredictedResult.builder()
+                        .leagueName(league.getLeagueName())
+                        .match(m)
+                        .positionDelta(positionDelta)
+                        .l6formDelta(last6Delta)
+                        .goalDiffDelta(goalDiffDelta)
+                        .goalsForDelta(goalsForDelta)
+                        .overallDelta(overall)
+                        .overallResult(overall>0?HW:AW)
+                        .build());
         }
-
+        return results;
     }
 
     private String resultFromGoalsForDelta(double goalsForDelta) {
