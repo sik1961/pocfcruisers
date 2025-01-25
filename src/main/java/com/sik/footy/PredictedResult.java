@@ -21,7 +21,9 @@ public class PredictedResult implements Comparable<PredictedResult> {
 
     @Override
     public int compareTo(PredictedResult that) {
-        return Double.compare(that.getOverallDelta(), this.overallDelta);
+        return Double.compare(that.getOverallDelta(),this.overallDelta)==0 ?
+                Double.compare(that.getL6formDelta(), this.l6formDelta) :
+                Double.compare(that.getOverallDelta(),this.overallDelta);
     }
 
 }
