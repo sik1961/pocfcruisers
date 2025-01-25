@@ -14,6 +14,7 @@ import static java.lang.String.format;
 public class TableManager {
 
     public Last6Helper last6Helper = new Last6Helper();
+    public FootyHelper helper = new FootyHelper();
 
     private static final String FORM_FORMAT = "%2d %30s %2d %2d %2d %2d %2d %2d %3d %3d %6s %5.2f %5.2f %5.2f %5.2f";
     private static final String HEAD_FORMAT = "%2s %30s %2s %2s %2s %2s %2s %2s %3s %3s %6s %5s %5s %5s %5s";
@@ -108,7 +109,7 @@ public class TableManager {
         for(Integer k:leagueTable.getTable().keySet()) {
             System.out.println(format(FORM_FORMAT,
                     leagueTable.getTable().get(k).getPosition(),
-                    leagueTable.getTable().get(k).getTeamName(),
+                    leagueTable.getTable().get(k).getTeamName() + "(" + helper.abbreviatedName(leagueTable.getTable().get(k).getTeamName()) + ")",
                     leagueTable.getTable().get(k).getGamesPlayed(),
                     leagueTable.getTable().get(k).getGamesWon(),
                     leagueTable.getTable().get(k).getGamesDrawn(),

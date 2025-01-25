@@ -16,11 +16,12 @@ public class FootyPredictor {
     private static final String HW = "HW";
     private static final String AW = "AW";
     private static final String DR = "DR";
-    private static final String RESULT_FORMAT = "%31s %3s %31s %11s %11s %11s %11s %11s";
+    private static final String RESULT_FORMAT = "%13s %3s %13s %11s %11s %11s %11s %11s";
     //private static final String HEADER_FORMAT = "%31s %3s %31s %11s %11s %11s %11s";
     private static final String DBLF = " %.2f";
 
     TableManager tableManager = new TableManager();
+    FootyHelper helper = new FootyHelper();
 
     public Collection<PredictedResult> predict(LeagueTable league) {
 
@@ -33,7 +34,7 @@ public class FootyPredictor {
 //        }
         System.out.println();
         System.out.println("Matches: " + league.getLeagueName());
-        System.out.printf((RESULT_FORMAT) ,"Home Team", "", "Away Team", "Lg-PosΔ", "L6FormΔ", "GlDiffΔ", "GlsForΔ", "AverageΔ");
+        System.out.printf((RESULT_FORMAT) ,"Home", "", "Away", "Lg-PosΔ", "L6FormΔ", "GlDiffΔ", "GlsForΔ", "AverageΔ");
         System.out.println();
         List<Match> matches = this.buildMatches(league, matchList);
         for (Match m:matches) {
@@ -46,9 +47,9 @@ public class FootyPredictor {
             double goalDiffDelta = (double) (m.getHomeTeam().getEnhancedStats().getAverageGoalDifference()
                     -m.getAwayTeam().getEnhancedStats().getAverageGoalDifference())/league.getMaxGoalDiff();
             double overall = Arrays.stream(new double[]{positionDelta,last6Delta,goalsForDelta,goalDiffDelta}).average().getAsDouble();
-            System.out.printf((RESULT_FORMAT) , m.getHomeTeam().getTeamName() + " (" + m.getHomeTeam().getLastSixForm() + ")",
+            System.out.printf((RESULT_FORMAT) , helper.abbreviatedName(m.getHomeTeam().getTeamName()) + " (" + m.getHomeTeam().getLastSixForm() + ")",
                     " v ",
-                    m.getAwayTeam().getTeamName() + " (" + m.getAwayTeam().getLastSixForm() + ")",
+                    helper.abbreviatedName(m.getAwayTeam().getTeamName()) + " (" + m.getAwayTeam().getLastSixForm() + ")",
                     (positionDelta>0?HW:AW) + String.format(DBLF,positionDelta),
                     (last6Delta>0?HW:AW) + String.format(DBLF,last6Delta),
                     (goalDiffDelta>0?HW:AW) + String.format(DBLF,goalDiffDelta),
