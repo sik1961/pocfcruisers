@@ -31,6 +31,7 @@ public class FootyPredictor {
 //        for(Match m:matchList) {
 //            System.out.println(m);
 //        }
+        System.out.println();
         System.out.println("Matches: " + league.getLeagueName());
         System.out.printf((RESULT_FORMAT) ,"Home Team", "", "Away Team", "Lg-PosΔ", "L6FormΔ", "GlDiffΔ", "GlsForΔ", "AverageΔ");
         System.out.println();

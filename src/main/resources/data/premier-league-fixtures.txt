@@ -1,15 +1,5 @@
-Saturday 4th January
-Tottenham Hotspur versus Newcastle United kick off 12:30
-Tottenham Hotspur
-Tottenham Hotspur
-
-12:30
-12:30
-plays
-
-Newcastle United
-Newcastle United
-AFC Bournemouth versus Everton kick off 15:00
+Saturday 25th January
+AFC Bournemouth versus Nottingham Forest kick off 15:00
 AFC Bournemouth
 AFC Bournemouth
 
@@ -17,39 +7,29 @@ AFC Bournemouth
 15:00
 plays
 
+Nottingham Forest
+Nottingham Forest
+Brighton & Hove Albion versus Everton kick off 15:00
+Brighton & Hove Albion
+Brighton & Hove Albion
+
+15:00
+15:00
+plays
+
 Everton
 Everton
-Aston Villa versus Leicester City kick off 15:00
-Aston Villa
-Aston Villa
+Liverpool versus Ipswich Town kick off 15:00
+Liverpool
+Liverpool
 
 15:00
 15:00
 plays
 
-Leicester City
-Leicester City
-Crystal Palace versus Chelsea kick off 15:00
-Crystal Palace
-Crystal Palace
-
-15:00
-15:00
-plays
-
-Chelsea
-Chelsea
-Manchester City versus West Ham United kick off 15:00
-Manchester City
-Manchester City
-
-15:00
-15:00
-plays
-
-West Ham United
-West Ham United
-Southampton versus Brentford kick off 15:00
+Ipswich Town
+Ipswich Town
+Southampton versus Newcastle United kick off 15:00
 Southampton
 Southampton
 
@@ -57,14 +37,66 @@ Southampton
 15:00
 plays
 
-Brentford
-Brentford
-Brighton & Hove Albion versus Arsenal kick off 17:30
-Brighton & Hove Albion
-Brighton & Hove Albion
+Newcastle United
+Newcastle United
+Wolverhampton Wanderers versus Arsenal kick off 15:00
+Wolverhampton Wanderers
+Wolverhampton Wanderers
 
-17:30
-17:30
+15:00
+15:00
 plays
 
 Arsenal
+Arsenal
+Manchester City versus Chelsea kick off 17:30
+Manchester City
+Manchester City
+
+17:30
+17:30
+plays
+
+Chelsea
+Chelsea
+Sunday 26th January
+Crystal Palace versus Brentford kick off 14:00
+Crystal Palace
+Crystal Palace
+
+14:00
+14:00
+plays
+
+Brentford
+Brentford
+Tottenham Hotspur versus Leicester City kick off 14:00
+Tottenham Hotspur
+Tottenham Hotspur
+
+14:00
+14:00
+plays
+
+Leicester City
+Leicester City
+Aston Villa versus West Ham United kick off 16:30
+Aston Villa
+Aston Villa
+
+16:30
+16:30
+plays
+
+West Ham United
+West Ham United
+Fulham versus Manchester United kick off 19:00
+Fulham
+Fulham
+
+19:00
+19:00
+plays
+
+Manchester United
+Manchester United

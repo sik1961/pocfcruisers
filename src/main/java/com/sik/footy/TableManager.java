@@ -124,7 +124,6 @@ public class TableManager {
                     leagueTable.getTable().get(k).getEnhancedStats().getLastSixFormFactor()));
         }
         System.out.println("Max Goal Difference:" + leagueTable.getMaxGoalDiff() + " Max Goals For: " + leagueTable.getMaxGoalsFor());
-
-
+        System.out.println();
     }
 }

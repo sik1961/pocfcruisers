@@ -1,15 +1,35 @@
-Saturday 4th January
-Blackburn Rovers versus Burnley kick off 12:30
-Blackburn Rovers
-Blackburn Rovers
+Sheffield United versus Hull City kick off 20:00
+Sheffield United
+Sheffield United
+
+20:00
+20:00
+plays
+
+Hull City
+Hull City
+Saturday 25th January
+Luton Town versus Millwall kick off 12:30
+Luton Town
+Luton Town
 
 12:30
 12:30
 plays
 
-Burnley
-Burnley
-Stoke City versus Plymouth Argyle kick off 12:30
+Millwall
+Millwall
+Norwich City versus Swansea City kick off 12:30
+Norwich City
+Norwich City
+
+12:30
+12:30
+plays
+
+Swansea City
+Swansea City
+Stoke City versus Oxford United kick off 12:30
 Stoke City
 Stoke City
 
@@ -17,19 +37,9 @@ Stoke City
 12:30
 plays
 
-Plymouth Argyle
-Plymouth Argyle
-Swansea City versus West Bromwich Albion kick off 12:30
-Swansea City
-Swansea City
-
-12:30
-12:30
-plays
-
-West Bromwich Albion
-West Bromwich Albion
-Bristol City versus Derby County kick off 15:00
+Oxford United
+Oxford United
+Bristol City versus Blackburn Rovers kick off 15:00
 Bristol City
 Bristol City
 
@@ -37,39 +47,29 @@ Bristol City
 15:00
 plays
 
-Derby County
-Derby County
-Hull City versus Leeds United kick off 15:00
-Hull City
-Hull City
-
-15:00
-15:00
-plays
-
-Leeds United
-Leeds United
-Middlesbrough versus Cardiff City kick off 15:00
-Middlesbrough
-Middlesbrough
-
-15:00
-15:00
-plays
-
+Blackburn Rovers
+Blackburn Rovers
+Cardiff City versus Derby County kick off 15:00
 Cardiff City
 Cardiff City
-Norwich City versus Coventry City kick off 15:00
-Norwich City
-Norwich City
 
 15:00
 15:00
 plays
 
+Derby County
+Derby County
+Coventry City versus Watford kick off 15:00
 Coventry City
 Coventry City
-Preston North End versus Oxford United kick off 15:00
+
+15:00
+15:00
+plays
+
+Watford
+Watford
+Preston North End versus Middlesbrough kick off 15:00
 Preston North End
 Preston North End
 
@@ -77,25 +77,36 @@ Preston North End
 15:00
 plays
 
-Oxford United
-Oxford United
-Sheffield Wednesday versus Millwall kick off 15:00
-Sheffield Wednesday
-Sheffield Wednesday
+Middlesbrough
+Middlesbrough
+Queens Park Rangers versus Sheffield Wednesday kick off 15:00
+Queens Park Rangers
+Queens Park Rangers
 
 15:00
 15:00
 plays
 
-Millwall
-Millwall
-Watford versus Sheffield United kick off 15:00
-Watford
-Watford
+Sheffield Wednesday
+Sheffield Wednesday
+Sunderland versus Plymouth Argyle kick off 15:00
+Sunderland
+Sunderland
 
 15:00
 15:00
 plays
 
-Sheffield United
-Sheffield United
+Plymouth Argyle
+Plymouth Argyle
+West Bromwich Albion versus Portsmouth kick off 15:00
+West Bromwich Albion
+West Bromwich Albion
+
+15:00
+15:00
+plays
+
+Portsmouth
+Portsmouth
+Monday 27th January

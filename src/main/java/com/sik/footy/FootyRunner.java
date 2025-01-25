@@ -36,6 +36,7 @@ public class FootyRunner {
         //List<PredictedResult> orderedResults = new ArrayList<>(results);
 
         Collections.sort(results);
+        System.out.println();
         System.out.println("Predicted results - Ordered Most HW -> Most AW");
         System.out.printf((RESULT_FORMAT) + "%n" ,"League", "Home Team", "", "Away Team", "PosΔ", "L6FΔ", "DifΔ", "ForΔ", "AvgΔ", "Res");
         System.out.printf((RESULT_FORMAT) + "%n" ,"------", "---------", "", "---------", "----", "----", "----", "----", "----", "---");
