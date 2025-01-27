@@ -1,5 +1,7 @@
-package com.sik.footy;
+package com.sik.footy.helpers;
 
+import com.sik.footy.core.Constants;
+import com.sik.footy.core.EnhancedStats;
 import org.jsoup.select.Elements;
 
 public class Last6Helper {

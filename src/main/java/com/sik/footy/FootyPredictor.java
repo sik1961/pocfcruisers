@@ -1,12 +1,17 @@
 package com.sik.footy;
 
+import com.sik.footy.core.LeagueTable;
+import com.sik.footy.core.Match;
+import com.sik.footy.core.PredictedResult;
+import com.sik.footy.helpers.FootyHelper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
-import static com.sik.footy.Constants.GOALS_FOR_DELTA_DRAW_MAX;
+import static com.sik.footy.core.Constants.GOALS_FOR_DELTA_DRAW_MAX;
 
 public class FootyPredictor {
 

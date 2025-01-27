@@ -1,10 +1,13 @@
 package com.sik.footy;
 
+import com.sik.footy.core.LeagueTable;
+import com.sik.footy.core.Match;
+import com.sik.footy.core.TeamForm;
+import com.sik.footy.helpers.Last6Helper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.TextNode;
-import org.jsoup.safety.Safelist;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -84,7 +87,7 @@ public class FixtureManager {
     }
 
     public void printTable(LeagueTable leagueTable) {
-        System.out.println("League Table: " + leagueTable.leagueName);
+        System.out.println("League Table: " + leagueTable.getLeagueName());
         System.out.println("---------------------------------------------------");
         System.out.println(format(HEAD_FORMAT,
                 "PN",

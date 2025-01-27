@@ -1,5 +1,9 @@
 package com.sik.footy;
 
+import com.sik.footy.core.LeagueTable;
+import com.sik.footy.core.TeamForm;
+import com.sik.footy.helpers.FootyHelper;
+import com.sik.footy.helpers.Last6Helper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -41,7 +45,7 @@ public class TableManager {
 
             if (cols.size() == 11) {
 
-                TeamForm teamForm = new TeamForm.TeamFormBuilder()
+                TeamForm teamForm = TeamForm.builder()
                         .position(Integer.parseInt(cols.get(0).text()))
                         .teamName(cols.get(1).text())
                         .gamesPlayed(Integer.parseInt(cols.get(2).text()))
@@ -71,7 +75,7 @@ public class TableManager {
 //        for(Integer k:teamFormMap.keySet()) {
 //            System.out.println(teamFormMap.get(k));
 //        }
-    return new LeagueTable.LeagueTableBuilder()
+    return LeagueTable.builder()
             .leagueName(leagueName)
             .table(teamFormMap)
             .maxGoalsFor(maxGoalsFor)
@@ -88,7 +92,7 @@ public class TableManager {
     }
 
     public void printTable(LeagueTable leagueTable) {
-        System.out.println("League Table: " + leagueTable.leagueName);
+        System.out.println("League Table: " + leagueTable.getLeagueName());
         System.out.println("---------------------------------------------------");
         System.out.println(format(HEAD_FORMAT,
                 "PN",

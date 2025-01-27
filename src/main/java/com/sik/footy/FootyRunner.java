@@ -1,9 +1,12 @@
 package com.sik.footy;
 
+import com.sik.footy.core.LeagueTable;
+import com.sik.footy.core.PredictedResult;
+import com.sik.footy.helpers.FootyHelper;
+
 import java.util.*;
 
-import static com.sik.footy.Constants.FIXTURE_URL_MAP;
-import static com.sik.footy.Constants.TABLE_URL_MAP;
+import static com.sik.footy.core.Constants.TABLE_URL_MAP;
 
 public class FootyRunner {
 

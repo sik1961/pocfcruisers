@@ -1,4 +1,4 @@
-package com.sik.footy;
+package com.sik.footy.core;
 
 import lombok.*;
 
