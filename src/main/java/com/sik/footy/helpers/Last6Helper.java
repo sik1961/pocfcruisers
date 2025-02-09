@@ -14,7 +14,7 @@ public class Last6Helper {
     }
 
     public EnhancedStats getEnhancedStats(Elements cols) {
-        return new EnhancedStats.EnhancedStatsBuilder()
+        return EnhancedStats.builder()
                 .averageGoalsFor(Double.parseDouble(cols.get(6).text())/Double.parseDouble(cols.get(2).text()))
                 .averageGoalsAgainst(Double.parseDouble(cols.get(7).text())/Double.parseDouble(cols.get(2).text()))
                 .averageGoalDifference(Double.parseDouble(cols.get(6).text())/Double.parseDouble(cols.get(2).text())-

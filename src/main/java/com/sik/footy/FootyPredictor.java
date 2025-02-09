@@ -88,7 +88,7 @@ public class FootyPredictor {
     private List<Match> buildMatches(LeagueTable leagueTable, List<String> matchList) {
         List<Match> matches = new ArrayList<>();
         for(String m: matchList) {
-            matches.add(new Match.MatchBuilder()
+            matches.add(Match.builder()
                     .homeTeam(tableManager.getTeamFormByName(leagueTable ,m.split(V)[0]))
                     .awayTeam(tableManager.getTeamFormByName(leagueTable,m.split(V)[1]))
                     .build());

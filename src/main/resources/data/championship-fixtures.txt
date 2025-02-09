@@ -1,57 +1,27 @@
-Sheffield United versus Hull City kick off 20:00
-Sheffield United
-Sheffield United
-
-20:00
-20:00
-plays
-
-Hull City
-Hull City
-Saturday 25th January
-Luton Town versus Millwall kick off 12:30
-Luton Town
-Luton Town
+Saturday 8th February
+Sunderland versus Watford kick off 12:30
+Sunderland
+Sunderland
 
 12:30
 12:30
 plays
 
-Millwall
-Millwall
-Norwich City versus Swansea City kick off 12:30
+Watford
+Watford
+West Bromwich Albion versus Sheffield Wednesday kick off 12:30
+West Bromwich Albion
+West Bromwich Albion
+
+12:30
+12:30
+plays
+
+Sheffield Wednesday
+Sheffield Wednesday
+Norwich City versus Derby County kick off 15:00
 Norwich City
 Norwich City
-
-12:30
-12:30
-plays
-
-Swansea City
-Swansea City
-Stoke City versus Oxford United kick off 12:30
-Stoke City
-Stoke City
-
-12:30
-12:30
-plays
-
-Oxford United
-Oxford United
-Bristol City versus Blackburn Rovers kick off 15:00
-Bristol City
-Bristol City
-
-15:00
-15:00
-plays
-
-Blackburn Rovers
-Blackburn Rovers
-Cardiff City versus Derby County kick off 15:00
-Cardiff City
-Cardiff City
 
 15:00
 15:00
@@ -59,49 +29,9 @@ plays
 
 Derby County
 Derby County
-Coventry City versus Watford kick off 15:00
-Coventry City
-Coventry City
-
-15:00
-15:00
-plays
-
-Watford
-Watford
-Preston North End versus Middlesbrough kick off 15:00
-Preston North End
-Preston North End
-
-15:00
-15:00
-plays
-
-Middlesbrough
-Middlesbrough
-Queens Park Rangers versus Sheffield Wednesday kick off 15:00
-Queens Park Rangers
-Queens Park Rangers
-
-15:00
-15:00
-plays
-
-Sheffield Wednesday
-Sheffield Wednesday
-Sunderland versus Plymouth Argyle kick off 15:00
-Sunderland
-Sunderland
-
-15:00
-15:00
-plays
-
-Plymouth Argyle
-Plymouth Argyle
-West Bromwich Albion versus Portsmouth kick off 15:00
-West Bromwich Albion
-West Bromwich Albion
+Sheffield United versus Portsmouth kick off 15:00
+Sheffield United
+Sheffield United
 
 15:00
 15:00
@@ -109,4 +39,13 @@ plays
 
 Portsmouth
 Portsmouth
-Monday 27th January
+Sunday 9th February
+Bristol City versus Swansea City kick off 12:00
+Bristol City
+Bristol City
+
+12:00
+12:00
+plays
+
+Swansea City

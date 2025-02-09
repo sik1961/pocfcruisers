@@ -1,15 +1,5 @@
-Newport County versus Swindon Town kick off 19:45
-Newport County
-Newport County
-
-19:45
-19:45
-plays
-
-Swindon Town
-Swindon Town
-Saturday 25th January
-Bradford City versus Walsall kick off 12:30
+Saturday 8th February
+Bradford City versus Harrogate Town kick off 12:30
 Bradford City
 Bradford City
 
@@ -17,19 +7,29 @@ Bradford City
 12:30
 plays
 
-Walsall
-Walsall
-Milton Keynes Dons versus AFC Wimbledon kick off 12:30
-Milton Keynes Dons
-Milton Keynes Dons
+Harrogate Town
+Harrogate Town
+Swindon Town versus Port Vale kick off 12:30
+Swindon Town
+Swindon Town
 
 12:30
 12:30
 plays
 
+Port Vale
+Port Vale
+Accrington Stanley versus AFC Wimbledon kick off 15:00
+Accrington Stanley
+Accrington Stanley
+
+15:00
+15:00
+plays
+
 AFC Wimbledon
 AFC Wimbledon
-Barrow versus Grimsby Town kick off 15:00
+Barrow versus Gillingham kick off 15:00
 Barrow
 Barrow
 
@@ -37,29 +37,9 @@ Barrow
 15:00
 plays
 
-Grimsby Town
-Grimsby Town
-Cheltenham Town versus Salford City kick off 15:00
-Cheltenham Town
-Cheltenham Town
-
-15:00
-15:00
-plays
-
-Salford City
-Salford City
-Chesterfield versus Port Vale kick off 15:00
-Chesterfield
-Chesterfield
-
-15:00
-15:00
-plays
-
-Port Vale
-Port Vale
-Colchester United versus Morecambe kick off 15:00
+Gillingham
+Gillingham
+Colchester United versus Walsall kick off 15:00
 Colchester United
 Colchester United
 
@@ -67,9 +47,9 @@ Colchester United
 15:00
 plays
 
-Morecambe
-Morecambe
-Crewe Alexandra versus Accrington Stanley kick off 15:00
+Walsall
+Walsall
+Crewe Alexandra versus Newport County kick off 15:00
 Crewe Alexandra
 Crewe Alexandra
 
@@ -77,19 +57,9 @@ Crewe Alexandra
 15:00
 plays
 
-Accrington Stanley
-Accrington Stanley
-Doncaster Rovers versus Harrogate Town kick off 15:00
-Doncaster Rovers
-Doncaster Rovers
-
-15:00
-15:00
-plays
-
-Harrogate Town
-Harrogate Town
-Fleetwood Town versus Carlisle United kick off 15:00
+Newport County
+Newport County
+Fleetwood Town versus Cheltenham Town kick off 15:00
 Fleetwood Town
 Fleetwood Town
 
@@ -97,11 +67,21 @@ Fleetwood Town
 15:00
 plays
 
+Cheltenham Town
+Cheltenham Town
+Grimsby Town versus Carlisle United kick off 15:00
+Grimsby Town
+Grimsby Town
+
+15:00
+15:00
+plays
+
 Carlisle United
 Carlisle United
-Notts County versus Bromley kick off 15:00
-Notts County
-Notts County
+Milton Keynes Dons versus Bromley kick off 15:00
+Milton Keynes Dons
+Milton Keynes Dons
 
 15:00
 15:00
@@ -109,13 +89,23 @@ plays
 
 Bromley
 Bromley
-Tranmere Rovers versus Gillingham kick off 15:00
-Tranmere Rovers
-Tranmere Rovers
+Notts County versus Morecambe kick off 15:00
+Notts County
+Notts County
 
 15:00
 15:00
 plays
 
-Gillingham
-Gillingham
+Morecambe
+Morecambe
+Salford City versus Tranmere Rovers kick off 15:00
+Salford City
+Salford City
+
+15:00
+15:00
+plays
+
+Tranmere Rovers
+Tranmere Rovers
