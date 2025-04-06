@@ -3,6 +3,7 @@ package com.sik.footy.helpers;
 import com.sik.footy.core.Constants;
 import com.sik.footy.core.EnhancedStats;
 import org.jsoup.select.Elements;
+import static com.sik.footy.core.Constants.*;
 
 public class Last6Helper {
     public String squash(String input) {
@@ -15,11 +16,11 @@ public class Last6Helper {
 
     public EnhancedStats getEnhancedStats(Elements cols) {
         return EnhancedStats.builder()
-                .averageGoalsFor(Double.parseDouble(cols.get(6).text())/Double.parseDouble(cols.get(2).text()))
-                .averageGoalsAgainst(Double.parseDouble(cols.get(7).text())/Double.parseDouble(cols.get(2).text()))
-                .averageGoalDifference(Double.parseDouble(cols.get(6).text())/Double.parseDouble(cols.get(2).text())-
-                        Double.parseDouble(cols.get(7).text())/Double.parseDouble(cols.get(2).text()))
-                .lastSixFormFactor(this.calculateFormFactor(this.squash(cols.get(10).text())))
+                .averageGoalsFor(Double.parseDouble(cols.get(I_GLSFR).text())/Double.parseDouble(cols.get(I_PLAYED).text()))
+                .averageGoalsAgainst(Double.parseDouble(cols.get(I_GLSAG).text())/Double.parseDouble(cols.get(I_PLAYED).text()))
+                .averageGoalDifference(Double.parseDouble(cols.get(I_GLDIF).text())/Double.parseDouble(cols.get(I_PLAYED).text())-
+                        Double.parseDouble(cols.get(I_GLDIF).text())/Double.parseDouble(cols.get(I_PLAYED).text()))
+                .lastSixFormFactor(this.calculateFormFactor(this.squash(cols.get(I_FORM).text())))
                 .build();
     }
 

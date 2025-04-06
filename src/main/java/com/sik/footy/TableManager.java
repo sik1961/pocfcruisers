@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
+import static com.sik.footy.core.Constants.*;
 
 public class TableManager {
 
@@ -34,7 +35,7 @@ public class TableManager {
             throw new RuntimeException(e);
         }
 
-        Element table = doc.select("table").get(0); //select the first table.
+        Element table = doc.select("table").get(I0); //select the first table.
         Elements rows = table.select("tr");
 
         Map<Integer, TeamForm> teamFormMap = new HashMap<>();
@@ -43,38 +44,42 @@ public class TableManager {
             Element row = rows.get(i);
             Elements cols = row.select("td");
 
-            if (cols.size() == 11) {
+            if (cols.size() == 10) {
+
+                /**
+                 * Fix problem caused by BBC merging position & teamname
+                 */
+                String posName = cols.get(I_POSTEAM).text();
+                Integer pos = Integer.parseInt(cols.get(I_POSTEAM).text().split(" ")[I0]);
+                String tName = cols.get(I_POSTEAM).text().substring(cols.get(I_POSTEAM).text().indexOf(" ")+1);
 
                 TeamForm teamForm = TeamForm.builder()
-                        .position(Integer.parseInt(cols.get(0).text()))
-                        .teamName(cols.get(1).text())
-                        .gamesPlayed(Integer.parseInt(cols.get(2).text()))
-                        .gamesWon(Integer.parseInt(cols.get(3).text()))
-                        .gamesDrawn(Integer.parseInt(cols.get(4).text()))
-                        .gamesLost(Integer.parseInt(cols.get(5).text()))
-                        .goalsFor(Integer.parseInt(cols.get(6).text()))
-                        .goalsAgainst(Integer.parseInt(cols.get(7).text()))
-                        .goalDifference(Integer.parseInt(cols.get(8).text()))
-                        .points(Integer.parseInt(cols.get(9).text()))
-                        .lastSixForm(last6Helper.squash(cols.get(10).text()))
+                        .position(pos)
+                        .teamName(tName)
+                        .gamesPlayed(Integer.parseInt(cols.get(I_PLAYED).text()))
+                        .gamesWon(Integer.parseInt(cols.get(I_WON).text()))
+                        .gamesDrawn(Integer.parseInt(cols.get(I_DRAWN).text()))
+                        .gamesLost(Integer.parseInt(cols.get(I_LOST).text()))
+                        .goalsFor(Integer.parseInt(cols.get(I_GLSFR).text()))
+                        .goalsAgainst(Integer.parseInt(cols.get(I_GLSAG).text()))
+                        .goalDifference(Integer.parseInt(cols.get(I_GLDIF).text()))
+                        .points(Integer.parseInt(cols.get(I_POINTS).text()))
+                        .lastSixForm(last6Helper.squash(cols.get(I_FORM).text()))
                         .enhancedStats(last6Helper.getEnhancedStats(cols))
                         .build();
 
-                teamFormMap.put(Integer.parseInt(cols.get(0).text()), teamForm);
-                if (Integer.parseInt(cols.get(6).text())>maxGoalsFor) {
-                    maxGoalsFor = Double.parseDouble(cols.get(6).text());
+                teamFormMap.put(pos, teamForm);
+                if (Integer.parseInt(cols.get(I_GLSFR).text())>maxGoalsFor) {
+                    maxGoalsFor = Double.parseDouble(cols.get(I_GLSFR).text());
                 }
-                if (Integer.parseInt(cols.get(8).text())>maxGoalDiff) {
-                    maxGoalDiff = Double.parseDouble(cols.get(8).text());
+                if (Integer.parseInt(cols.get(I_GLDIF).text())>maxGoalDiff) {
+                    maxGoalDiff = Double.parseDouble(cols.get(I_GLDIF).text());
                 }
             } else {
-                throw new IllegalStateException("Column count <> 11");
+                throw new IllegalStateException("Column count <> 10 - #cols={}" + cols.size());
             }
 
         }
-//        for(Integer k:teamFormMap.keySet()) {
-//            System.out.println(teamFormMap.get(k));
-//        }
     return LeagueTable.builder()
             .leagueName(leagueName)
             .table(teamFormMap)
