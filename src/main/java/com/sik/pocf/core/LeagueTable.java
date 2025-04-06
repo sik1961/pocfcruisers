@@ -9,7 +9,7 @@ import java.util.Map;
 @EqualsAndHashCode
 public class LeagueTable {
     String leagueName;
-    Map<Integer, TeamForm> table;
+    Map<Integer, ShipEvent> table;
     Double maxGoalsFor;
     Double maxGoalDiff;
 }

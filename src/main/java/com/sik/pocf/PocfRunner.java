@@ -1,67 +1,22 @@
 package com.sik.pocf;
 
-import com.sik.pocfcruisers.core.LeagueTable;
-import com.sik.pocfcruisers.core.PredictedResult;
-import com.sik.pocfcruisers.helpers.pocfcruisersHelper;
+import com.sik.pocf.core.ShipEvent;
+import com.sik.pocf.helpers.PocfHelper;
 
-import java.util.*;
+import java.util.List;
 
-import static com.sik.pocfcruisers.core.Constants.TABLE_URL_MAP;
+//import static com.sik.pocf.core.Constants.PROPS;
 
 public class PocfRunner {
 
-    private static final String RESULT_FORMAT = "%20s %4s %3s %4s %5s %5s %5s %5s %5s %3s";
-    private static final String DBLF = " %.2f";
 
     public static void main(String[] args) {
-        com.sik.pocf.TableManager tableManager = new TableManager();
-        FixtureManager fixtureManager = new FixtureManager();
-        pocfcruisersPredictor predictor = new pocfcruisersPredictor();
-        pocfcruisersHelper helper = new pocfcruisersHelper();
-
-        List<LeagueTable> leagueTables = new ArrayList<>();
-        for (String l: TABLE_URL_MAP.keySet()) {
-            leagueTables.add(tableManager.build(l, TABLE_URL_MAP.get(l)));
+        PocfHelper helper = new PocfHelper();
+        IcsFileWriter icsFileWriter = new IcsFileWriter();
+        List<ShipEvent> shipEvents = helper.getShipEventsFromCsv();
+        for (ShipEvent e:shipEvents) {
+            System.out.println(e);
         }
-
-        //fixtureManager.build("championship", FIXTURE_URL_MAP.get("championship"));
-
-        //tableManager.printTable(championship);
-
-        List<PredictedResult> results = new ArrayList<>();
-
-        for (LeagueTable table:leagueTables) {
-            tableManager.printTable(table);
-        }
-        for (LeagueTable table:leagueTables) {
-            results.addAll(predictor.predict(table));
-        }
-
-        //List<PredictedResult> orderedResults = new ArrayList<>(results);
-
-        Collections.sort(results);
-        System.out.println();
-        System.out.println("Predicted results - Ordered Most HW -> Most AW");
-        System.out.printf((RESULT_FORMAT) + "%n" ,"League", "Home", "", "Away", "PosΔ", "L6FΔ", "DifΔ", "ForΔ", "AvgΔ", "Res");
-        System.out.printf((RESULT_FORMAT) + "%n" ,"------", "----", "", "----", "----", "----", "----", "----", "----", "---");
-        for (PredictedResult result: results) {
-            System.out.printf((RESULT_FORMAT) + "%n",
-                    result.getLeagueName(),
-                    helper.abbreviatedName(result.getMatch().getHomeTeam().getTeamName()),
-                    "v",
-                    helper.abbreviatedName(result.getMatch().getAwayTeam().getTeamName()),
-                    String.format(DBLF, result.getPositionDelta()),
-                    String.format(DBLF, result.getL6formDelta()),
-                    String.format(DBLF, result.getGoalsForDelta()),
-                    String.format(DBLF, result.getGoalDiffDelta()),
-                    String.format(DBLF, result.getOverallDelta()),
-                    result.getOverallResult());
-        }
-
-//        for (Integer k:championship.table.keySet()) {
-//            System.out.println(championship.table.get(k));
-//        }
-
-
+        icsFileWriter.writeEventsToIcsFile(shipEvents, "/Users/sik/cruisers");
     }
 }

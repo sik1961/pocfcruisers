@@ -10,6 +10,6 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 public class Match {
-    TeamForm homeTeam;
-    TeamForm awayTeam;
+    ShipEvent homeTeam;
+    ShipEvent awayTeam;
 }
