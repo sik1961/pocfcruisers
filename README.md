@@ -1,1 +1,1 @@
-Purely experimental attempt at coding the black art of football result prediction.
+Utility to add entries to a google calendar from a csv file.

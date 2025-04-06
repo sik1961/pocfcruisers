@@ -1,9 +1,9 @@
-package com.sik.footy;
+package com.sik.pocfcruisers;
 
-import com.sik.footy.core.LeagueTable;
-import com.sik.footy.core.TeamForm;
-import com.sik.footy.helpers.FootyHelper;
-import com.sik.footy.helpers.Last6Helper;
+import com.sik.pocfcruisers.core.LeagueTable;
+import com.sik.pocfcruisers.core.TeamForm;
+import com.sik.pocfcruisers.helpers.pocfcruisersHelper;
+import com.sik.pocfcruisers.helpers.Last6Helper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,12 +14,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
-import static com.sik.footy.core.Constants.*;
+import static com.sik.pocfcruisers.core.Constants.*;
 
 public class TableManager {
 
     public Last6Helper last6Helper = new Last6Helper();
-    public FootyHelper helper = new FootyHelper();
+    public pocfcruisersHelper helper = new pocfcruisersHelper();
 
     private static final String FORM_FORMAT = "%2d %30s %2d %2d %2d %2d %2d %2d %3d %3d %6s %5.2f %5.2f %5.2f %5.2f";
     private static final String HEAD_FORMAT = "%2s %30s %2s %2s %2s %2s %2s %2s %3s %3s %6s %5s %5s %5s %5s";

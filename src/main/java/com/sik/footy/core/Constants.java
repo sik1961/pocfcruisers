@@ -1,4 +1,4 @@
-package com.sik.footy.core;
+package com.sik.pocfcruisers.core;
 
 import java.util.Arrays;
 import java.util.List;

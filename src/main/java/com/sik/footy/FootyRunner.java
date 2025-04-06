@@ -1,14 +1,14 @@
-package com.sik.footy;
+package com.sik.pocfcruisers;
 
-import com.sik.footy.core.LeagueTable;
-import com.sik.footy.core.PredictedResult;
-import com.sik.footy.helpers.FootyHelper;
+import com.sik.pocfcruisers.core.LeagueTable;
+import com.sik.pocfcruisers.core.PredictedResult;
+import com.sik.pocfcruisers.helpers.pocfcruisersHelper;
 
 import java.util.*;
 
-import static com.sik.footy.core.Constants.TABLE_URL_MAP;
+import static com.sik.pocfcruisers.core.Constants.TABLE_URL_MAP;
 
-public class FootyRunner {
+public class pocfcruisersRunner {
 
     private static final String RESULT_FORMAT = "%20s %4s %3s %4s %5s %5s %5s %5s %5s %3s";
     private static final String DBLF = " %.2f";
@@ -16,8 +16,8 @@ public class FootyRunner {
     public static void main(String[] args) {
         TableManager tableManager = new TableManager();
         FixtureManager fixtureManager = new FixtureManager();
-        FootyPredictor predictor = new FootyPredictor();
-        FootyHelper helper = new FootyHelper();
+        pocfcruisersPredictor predictor = new pocfcruisersPredictor();
+        pocfcruisersHelper helper = new pocfcruisersHelper();
 
         List<LeagueTable> leagueTables = new ArrayList<>();
         for (String l: TABLE_URL_MAP.keySet()) {

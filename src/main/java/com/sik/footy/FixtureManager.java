@@ -1,9 +1,9 @@
-package com.sik.footy;
+package com.sik.pocfcruisers;
 
-import com.sik.footy.core.LeagueTable;
-import com.sik.footy.core.Match;
-import com.sik.footy.core.TeamForm;
-import com.sik.footy.helpers.Last6Helper;
+import com.sik.pocfcruisers.core.LeagueTable;
+import com.sik.pocfcruisers.core.Match;
+import com.sik.pocfcruisers.core.TeamForm;
+import com.sik.pocfcruisers.helpers.Last6Helper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

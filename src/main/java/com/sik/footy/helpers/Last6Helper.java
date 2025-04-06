@@ -1,9 +1,9 @@
-package com.sik.footy.helpers;
+package com.sik.pocfcruisers.helpers;
 
-import com.sik.footy.core.Constants;
-import com.sik.footy.core.EnhancedStats;
+import com.sik.pocfcruisers.core.Constants;
+import com.sik.pocfcruisers.core.EnhancedStats;
 import org.jsoup.select.Elements;
-import static com.sik.footy.core.Constants.*;
+import static com.sik.pocfcruisers.core.Constants.*;
 
 public class Last6Helper {
     public String squash(String input) {

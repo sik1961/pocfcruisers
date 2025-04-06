@@ -1,10 +1,10 @@
-package com.sik.footy;
+package com.sik.pocfcruisers;
 
-import com.sik.footy.core.LeagueTable;
-import com.sik.footy.core.Match;
-import com.sik.footy.core.PredictedResult;
-import com.sik.footy.core.TeamForm;
-import com.sik.footy.helpers.FootyHelper;
+import com.sik.pocfcruisers.core.LeagueTable;
+import com.sik.pocfcruisers.core.Match;
+import com.sik.pocfcruisers.core.PredictedResult;
+import com.sik.pocfcruisers.core.TeamForm;
+import com.sik.pocfcruisers.helpers.pocfcruisersHelper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +12,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
-import static com.sik.footy.core.Constants.GOALS_FOR_DELTA_DRAW_MAX;
-import static com.sik.footy.core.Constants.*;
+import static com.sik.pocfcruisers.core.Constants.GOALS_FOR_DELTA_DRAW_MAX;
+import static com.sik.pocfcruisers.core.Constants.*;
 
-public class FootyPredictor {
+public class pocfcruisersPredictor {
 
     private static final String VERSUS = " versus ";
     private static final String KICK_OFF = " kick off ";
@@ -28,7 +28,7 @@ public class FootyPredictor {
     private static final String DBLF = " %.2f";
 
     TableManager tableManager = new TableManager();
-    FootyHelper helper = new FootyHelper();
+    pocfcruisersHelper helper = new pocfcruisersHelper();
 
     public Collection<PredictedResult> predict(LeagueTable league) {
 
