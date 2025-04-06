@@ -1,4 +1,4 @@
-package com.sik.pocfcruisers;
+package com.sik.pocf;
 
 import com.sik.pocfcruisers.core.LeagueTable;
 import com.sik.pocfcruisers.core.Match;

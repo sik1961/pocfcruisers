@@ -1,10 +1,10 @@
-package com.sik.pocfcruisers;
+package com.sik.pocf;
 
-import com.sik.pocfcruisers.core.LeagueTable;
-import com.sik.pocfcruisers.core.Match;
-import com.sik.pocfcruisers.core.PredictedResult;
-import com.sik.pocfcruisers.core.TeamForm;
-import com.sik.pocfcruisers.helpers.pocfcruisersHelper;
+import com.sik.pocf.core.LeagueTable;
+import com.sik.pocf.core.Match;
+import com.sik.pocf.core.PredictedResult;
+import com.sik.pocf.core.TeamForm;
+import com.sik.pocf.helpers.FootyHelper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import static com.sik.pocfcruisers.core.Constants.GOALS_FOR_DELTA_DRAW_MAX;
 import static com.sik.pocfcruisers.core.Constants.*;
 
-public class pocfcruisersPredictor {
+public class FootyPredictor {
 
     private static final String VERSUS = " versus ";
     private static final String KICK_OFF = " kick off ";
@@ -27,8 +27,8 @@ public class pocfcruisersPredictor {
     //private static final String HEADER_FORMAT = "%31s %3s %31s %11s %11s %11s %11s";
     private static final String DBLF = " %.2f";
 
-    TableManager tableManager = new TableManager();
-    pocfcruisersHelper helper = new pocfcruisersHelper();
+    com.sik.pocfcruisers.TableManager tableManager = new TableManager();
+    FootyHelper helper = new FootyHelper();
 
     public Collection<PredictedResult> predict(LeagueTable league) {
 

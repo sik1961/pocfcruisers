@@ -1,4 +1,4 @@
-package com.sik.pocfcruisers.core;
+package com.sik.pocf.core;
 
 import lombok.*;
 @Builder

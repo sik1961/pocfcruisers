@@ -1,4 +1,4 @@
-package com.sik.pocfcruisers;
+package com.sik.pocf;
 
 import com.sik.pocfcruisers.core.LeagueTable;
 import com.sik.pocfcruisers.core.PredictedResult;
@@ -8,13 +8,13 @@ import java.util.*;
 
 import static com.sik.pocfcruisers.core.Constants.TABLE_URL_MAP;
 
-public class pocfcruisersRunner {
+public class PocfRunner {
 
     private static final String RESULT_FORMAT = "%20s %4s %3s %4s %5s %5s %5s %5s %5s %3s";
     private static final String DBLF = " %.2f";
 
     public static void main(String[] args) {
-        TableManager tableManager = new TableManager();
+        com.sik.pocf.TableManager tableManager = new TableManager();
         FixtureManager fixtureManager = new FixtureManager();
         pocfcruisersPredictor predictor = new pocfcruisersPredictor();
         pocfcruisersHelper helper = new pocfcruisersHelper();

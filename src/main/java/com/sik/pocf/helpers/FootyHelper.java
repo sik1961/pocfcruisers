@@ -1,6 +1,6 @@
-package com.sik.pocfcruisers.helpers;
+package com.sik.pocf.helpers;
 
-public class pocfcruisersHelper {
+public class FootyHelper {
     public String abbreviatedName(String name) {
         String[] words = name.split(" ");
         if (words.length > 2) {

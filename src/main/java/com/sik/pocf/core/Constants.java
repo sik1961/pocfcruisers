@@ -1,4 +1,4 @@
-package com.sik.pocfcruisers.core;
+package com.sik.pocf.core;
 
 import java.util.Arrays;
 import java.util.List;
