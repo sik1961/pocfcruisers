@@ -12,22 +12,9 @@ import static com.sik.pocf.core.Constants.*;
 
 public class PocfHelper {
 
-    public String abbreviatedName(String name) {
-        String[] words = name.split(" ");
-        if (words.length > 2) {
-            return words[0].substring(0, 1).toUpperCase() + words[1].substring(0,1).toUpperCase() + words[2].substring(0,1).toUpperCase();
-        } else if (words.length > 1) {
-            return words[0].substring(0, 2).toUpperCase() + words[1].substring(0,1).toUpperCase();
-        } else {
-            return words[0].substring(0,3).toUpperCase();
-        }
-    }
-
     public List<ShipEvent> getShipEventsFromCsv() {
         Properties props = this.getPropsFromFile();
         List<ShipEvent> shipEvents = new ArrayList<>();
-
-
 
             try {
                 BufferedReader br = new BufferedReader(new FileReader(props.getProperty("csvFile")));

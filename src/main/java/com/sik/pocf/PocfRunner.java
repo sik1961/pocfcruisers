@@ -5,10 +5,7 @@ import com.sik.pocf.helpers.PocfHelper;
 
 import java.util.List;
 
-//import static com.sik.pocf.core.Constants.PROPS;
-
 public class PocfRunner {
-
 
     public static void main(String[] args) {
         PocfHelper helper = new PocfHelper();
