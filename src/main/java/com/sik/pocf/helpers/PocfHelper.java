@@ -43,7 +43,6 @@ public class PocfHelper {
                                     .pax(Integer.valueOf(cols[I_PAX]))
                                     .crew(Integer.valueOf(cols[I_CREW]))
                                     .language(cols.length>12?cols[I_LANG]:"")
-                                    .fromPort(cols.length>13?cols[I_FROM]:"")
                                     .build();
                             shipEvents.add(arrival);
                         }
@@ -62,7 +61,6 @@ public class PocfHelper {
                                     .pax(Integer.valueOf(cols[I_PAX]))
                                     .crew(Integer.valueOf(cols[I_CREW]))
                                     .language(cols.length>12?cols[I_LANG]:"")
-                                    .fromPort(cols.length>13?cols[I_FROM]:"")
                                     .build();
                             shipEvents.add(departure);
                         }

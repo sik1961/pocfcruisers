@@ -55,7 +55,9 @@ public class IcsFileWriter {
                 bw.write(String.format(organizer_fmt, "/com/sik/si/kusners/"));
                 bw.write(String.format(dtstart_fmt, evt.getDateTime().format(ICS_DATE_FMT)));
                 bw.write(String.format(dtend_fmt, evt.getDateTime().plusMinutes(15L).format(ICS_DATE_FMT)));
-                bw.write(String.format(summary_fmt, evt.getVesselName().trim() + " (" + evt.getVesselCompany().trim() + ") " + (evt.getArrival()?"Arrives":"Departs")));
+                bw.write(String.format(summary_fmt, evt.getVesselName().trim() +
+                        " (" + evt.getVesselCompany().trim() + ") " +
+                        (evt.getArrival()?"Arrives":"Departs")));
                 bw.write(eventEnd);
                 evtCount++;
 

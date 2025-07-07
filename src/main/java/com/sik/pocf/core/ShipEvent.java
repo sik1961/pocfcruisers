@@ -22,6 +22,6 @@ public class ShipEvent {
     private Integer pax;
     private Integer crew;
     private String language;
-    private String fromPort;
+    //private String fromPort;
 
 }
