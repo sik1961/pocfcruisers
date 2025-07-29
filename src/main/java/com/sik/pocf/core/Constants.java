@@ -17,13 +17,13 @@ public class Constants {
     public static final int I_COMPANY = 4;
     public static final int I_ARRTIM = 5;
     public static final int I_POB = 6;
-    public static final int I_DEPTIM = 7;
-    public static final int I_BERTH = 8;
-    public static final int I_GTONNS = 9;
-    public static final int I_LENGTH = 10;
-    public static final int I_PAX = 11;
-    public static final int I_CREW = 12;
-    public static final int I_LANG = 13;
+    public static final int I_DEPTIM = 6;
+    public static final int I_BERTH = 7;
+    public static final int I_GTONNS = 8;
+    public static final int I_LENGTH = 9;
+    public static final int I_PAX = 10;
+    public static final int I_CREW = 11;
+    public static final int I_LANG = 12;
     //public static final int I_FROM = 14;
 
 }
