@@ -24,6 +24,7 @@ public class IcsFileWriter {
     private String dtstart_fmt = "DTSTART:%s\r\n";
     private String dtend_fmt = "DTEND:%s\r\n";
     private String summary_fmt = "SUMMARY:%s\r\n";
+    private String description_fmt = "DESCRIPTION:%s\r\n";
 
 
     public void writeEventsToIcsFile(List<ShipEvent> shipEvents, String icsFile ){
@@ -58,6 +59,7 @@ public class IcsFileWriter {
                 bw.write(String.format(summary_fmt, evt.getVesselName().trim() +
                         " (" + evt.getVesselCompany().trim() + ") " +
                         (evt.getArrival()?"Arrives":"Departs")));
+                bw.write(String.format(description_fmt, evt.getDescription()));
                 bw.write(eventEnd);
                 evtCount++;
 

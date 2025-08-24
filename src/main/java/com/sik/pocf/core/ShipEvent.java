@@ -24,4 +24,15 @@ public class ShipEvent {
     private String language;
     //private String fromPort;
 
+    public String getDescription() {
+        return new StringBuilder(vesselName + "(" + vesselCompany + ")")
+                .append("; Berth: " + berth)
+                .append("; GrossTonnage: " + grossTonnage)
+                .append("; Length: " + length + "m")
+                .append("; Pax: " + pax)
+                .append("; Crew: " + crew)
+                .append("; Language: " + language)
+                .toString();
+    }
+
 }
