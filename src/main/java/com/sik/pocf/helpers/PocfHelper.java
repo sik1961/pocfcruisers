@@ -28,9 +28,9 @@ public class PocfHelper {
                     //System.out.println(">>>>>>>>>>>" + cols.length);
 
                     if (this.isRealData(cols)) {
-                        if (!cols[I_ARRTIM].equalsIgnoreCase("n/a")) {
+                        if (cols[I_ARRTIM].matches(TIME_REGEX)) {
                             ShipEvent arrival = ShipEvent.builder()
-                                    .id(Integer.valueOf(cols[I_ID]))
+                                    .id(cols[I_ID])
                                     .dayOfWeek(cols[I_DAY])
                                     .dateTime(this.buildDateTime(cols[I_DATE], cols[I_ARRTIM]))
                                     .arrival(true)
@@ -46,9 +46,9 @@ public class PocfHelper {
                                     .build();
                             shipEvents.add(arrival);
                         }
-                        if (!cols[I_DEPTIM].equalsIgnoreCase("n/a")) {
+                        if (cols[I_DEPTIM].matches(TIME_REGEX)) {
                             ShipEvent departure = ShipEvent.builder()
-                                    .id(Integer.valueOf(cols[I_ID]))
+                                    .id(cols[I_ID])
                                     .dayOfWeek(cols[I_DAY])
                                     .dateTime(this.buildDateTime(cols[I_DATE], cols[I_DEPTIM]))
                                     .arrival(false)

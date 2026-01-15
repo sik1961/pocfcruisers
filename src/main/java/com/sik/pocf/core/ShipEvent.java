@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @ToString
 @EqualsAndHashCode
 public class ShipEvent {
-    private Integer id;
+    private String id;
     private String dayOfWeek;
     private LocalDateTime dateTime;
     private String vesselName;

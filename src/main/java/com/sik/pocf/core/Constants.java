@@ -25,5 +25,6 @@ public class Constants {
     public static final int I_CREW = 11;
     public static final int I_LANG = 12;
     //public static final int I_FROM = 14;
+    public static final String TIME_REGEX = "\\d{2}:\\d{2}";
 
 }
